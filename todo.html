@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="todo.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.6/Sortable.min.js"></script>
+  <script src="todo.js"></script>
+</head>
+<body>
+  <div id="main">
+    <div id="todo-container">
+        <template id="todo-template">
+          <div class="todo-note-wrapper">
+            <div class="todo-note">
+              <p>Some todo text</p>
+              <button class="delete-button">❌</button>
+            </div>
+          </div>
+        </template>
+    </div>
+    <div id="todo-new-container">
+      <textarea name="todo-new-input" id="todo-new-input"></textarea>
+      <button id="todo-new-button"><i class="fa-solid fa-plus"></i></button>
+    </div>
+  </div>
+</body>
+</html>

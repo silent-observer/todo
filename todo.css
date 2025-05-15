@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    font: inherit;
+}
+
+body {
+    background-color: #ddfaff;
+}
+
+#main {
+    max-width: 400px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#todo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-note-wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.2s ease-out;
+
+    @starting-style {
+        grid-template-rows: 0fr;
+    }
+}
+
+.todo-note-wrapper.hidden {
+    grid-template-rows: 0fr;
+}
+
+.todo-note {
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px #999;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 8px 5px 8px 10px;
+
+    background-color: white;
+}
+
+#todo-new-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#todo-new-input {
+    flex-grow: 1;
+    border: solid 1px #999;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 8px 5px 8px 10px;
+    background-color: #eee;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.delete-button {
+    align-self: flex-start;
+    margin: 5px;
+    font-size: 10px;
+
+    transition: all 0.2s ease-out;
+}
+
+.delete-button:hover {
+    scale: 1.2;
+}
+
+#todo-new-button {
+    align-self: center;
+    margin: 5px;
+    border: solid 2px rgb(0, 135, 25);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: rgb(218, 255, 224);
+    color: rgb(0, 135, 25);
+
+    transition: all 0.2s ease-out;
+}
+
+#todo-new-button:hover {
+    background-color: rgb(0, 135, 25);
+    color: rgb(218, 255, 224);
+    scale: 1.2;
+}
